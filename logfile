@@ -1,0 +1,18 @@
+2019-03-09 17:47:31.542 EST [41958] LOG:  listening on IPv6 address "::1", port 5432
+2019-03-09 17:47:31.542 EST [41958] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-03-09 17:47:31.543 EST [41958] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2019-03-09 17:47:31.556 EST [41959] LOG:  database system was shut down at 2019-03-09 17:47:15 EST
+2019-03-09 17:47:31.560 EST [41958] LOG:  database system is ready to accept connections
+2019-03-09 17:47:37.495 EST [41968] FATAL:  database "petermayor" does not exist
+2019-03-09 17:47:41.758 EST [41970] FATAL:  database "kwitter" does not exist
+2019-03-09 17:48:28.151 EST [41979] FATAL:  database "petermayor" does not exist
+2019-03-09 18:02:49.377 EST [42388] ERROR:  relation "users" does not exist at character 125
+2019-03-09 18:02:49.377 EST [42388] STATEMENT:  SELECT "id", "username", "displayName", "password", "about", "picture", "pictureContentType", "createdAt", "updatedAt" FROM "users" AS "user" WHERE "user"."username" = 'ppp' LIMIT 1;
+2019-03-09 18:07:43.313 EST [42709] FATAL:  database "petermayor" does not exist
+2019-03-09 18:08:05.150 EST [42716] FATAL:  database "kqitter" does not exist
+2019-03-09 18:12:32.179 EST [42806] ERROR:  relation "messages" does not exist at character 262
+2019-03-09 18:12:32.179 EST [42806] STATEMENT:  SELECT "message".*, "likes"."id" AS "likes.id", "likes"."userId" AS "likes.userId", "likes"."messageId" AS "likes.messageId", "likes"."createdAt" AS "likes.createdAt" FROM (SELECT "message"."id", "message"."text", "message"."userId", "message"."createdAt" FROM "messages" AS "message" ORDER BY "message"."createdAt" DESC LIMIT 100 OFFSET 0) AS "message" LEFT OUTER JOIN "likes" AS "likes" ON "message"."id" = "likes"."messageId" ORDER BY "message"."createdAt" DESC;
+2019-03-10 16:43:36.473 EDT [41958] LOG:  received smart shutdown request
+2019-03-10 16:43:36.478 EDT [41958] LOG:  background worker "logical replication launcher" (PID 41965) exited with exit code 1
+2019-03-10 16:43:36.479 EDT [41960] LOG:  shutting down
+2019-03-10 16:43:36.492 EDT [41958] LOG:  database system is shut down
