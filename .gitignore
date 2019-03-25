@@ -1,4 +1,7 @@
 node_modules
-.env
 .vscode
 kwitter
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
